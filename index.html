@@ -5,8 +5,252 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/main.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
   </head>
-  <body>
-    <h1 class="text-4xl underline color-red">Icual best come</h1> 
+  <body x-data="{openMenu: false}">
+    <div class="container mx-auto px-5 pt-5 md:px-8 md:pt-8">
+      <!-- Navigation -->
+      <header> 
+       <nav class="flex justify-between items-center">
+          <div class="w-[103px] h-[34px] md:w-[135px] md:h-[43px]">
+            <a href="index.html">
+              <img src="images/logo.png" alt="logo">
+            </a>
+          </div>
+          <!-- Mobile Menu -->
+          <button class="md:hidden">
+            <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.7333 6.66699H1.26667C0.567106 6.66699 0 7.2341 0 7.93366V8.06699C0 8.76655 0.567106 9.33366 1.26667 9.33366H22.7333C23.4329 9.33366 24 8.76655 24 8.06699V7.93366C24 7.2341 23.4329 6.66699 22.7333 6.66699Z" fill="black"/>
+              <path d="M22.7333 13.333H1.26667C0.567106 13.333 0 13.9001 0 14.5997V14.733C0 15.4326 0.567106 15.9997 1.26667 15.9997H22.7333C23.4329 15.9997 24 15.4326 24 14.733V14.5997C24 13.9001 23.4329 13.333 22.7333 13.333Z" fill="black"/>
+              <path d="M22.7333 0H1.26667C0.567106 0 0 0.567106 0 1.26667V1.4C0 2.09956 0.567106 2.66667 1.26667 2.66667H22.7333C23.4329 2.66667 24 2.09956 24 1.4V1.26667C24 0.567106 23.4329 0 22.7333 0Z" fill="black"/>
+            </svg>
+          </button>
+          <!-- <ul class="flex md:hidden"> -->
+          <!--   <li><a href="" class="text-light-crimson font-semibold">Home</a></li> -->
+          <!--   <li><a href="">About Us</a></li> -->
+          <!--   <li><a href="">Services</a></li> -->
+          <!--   <li><a href="">Teams</a></li> -->
+          <!--   <li><a href="">Articles</a></li> -->
+          <!--   <li><a href="">Contact Us</a></li> -->
+          <!-- </ul>      -->
+          <ul class="hidden md:flex space-x-6">
+            <li><a href="" class="text-light-crimson font-semibold">Home</a></li>
+            <li><a href="" class="hover:text-light-crimson">About</a></li>
+            <li><a href="" class="hover:text-light-crimson">Services</a></li>
+            <li><a href="" class="hover:text-light-crimson">Teams</a></li>
+            <li><a href="" class="hover:text-light-crimson">Articles</a></li>
+            <li><a href="" class="hover:text-light-crimson">Contact</a></li>
+          </ul>     
+       </nav> 
+      </header>
+
+
+      <!-- Hero Section -->
+      <section class="py-10">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center md:px-36">  
+          <div class="w-[420px]">
+            <h1 class="text-4xl font-extrabold text-[#65395A] leading-relaxed">Get <span class="text-[#F9A0B1]">Right Solution</span><br> For Your Business</h1>
+            <p class="text-[#65395A] py-6">We never stop learning & treat every study as unique, new, & fresh experience</p>
+            <a href="" class="inline-block text-[#65395A] font-semibold text-sm bg-[#FFD288] p-4 rounded-full">
+              Get a Consultation
+            </a>
+          </div>
+          <div class="max-w-[420px]">
+            <img src="images/hero-1.png" alt="Innercite Qualitative">
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Brand Section -->
+      <section class="bg-[#FFCCEF] p-12">
+        <div class="flex flex-wrap justify-center items-center space-x-4 lg:space-x-12">
+         <img src="images/pertamina.png" class="w-32" alt=""> 
+         <img src="images/pgn.png" class="w-14" alt=""> 
+         <img src="images/gojek.png" class="w-32" alt=""> 
+         <img src="images/unilever.png" class="w-14" alt=""> 
+         <img src="images/tokopedia.png" class="w-32" alt=""> 
+        </div>
+      </section>
+
+
+
+
+      <!-- About us Section -->
+      <section class="py-14">
+        <div class="flex justify-center items-center">
+          <div class="w-80">
+            <img src="images/girl-with-coffee.png" alt="Girl with coffee"> 
+          </div>
+          <div class="w-[500px] pl-12">
+            <p class="text-sm pb-3">About us</p>            
+            <h3 class="text-xl font-extrabold leading-relaxed tracking-wide">We believe that marketing strategy should be based on human relationship & interaction</h3>
+            <p class="pt-6 pb-3">Which makes qualitative research always relevant & never go out of fashion</p>
+            <a href="" class="inline-block text-[#3d3d3d] font-semibold text-sm bg-[#FFD288] py-3 px-6 rounded-full">
+              Read More
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Our Services Section -->
+      <section class="py-10">
+        <div>
+          <div class="max-w-[750px] mx-auto text-center">
+            <h2 class="text-3xl font-extrabold leading-relaxed tracking-wide pb-3">
+              Our Offered Services
+            </h2>
+            <p>“We provide full of thoroughness in all research stages, and all are built in our value chains. Of course it takes more than just the four of us to create the impactful chain, we collaborate with passionate individuals to make things happen”</p>
+          </div>
+
+          <div class="mt-16 w-[700px] mx-auto flex flex-wrap text-center">
+            <div class="w-[320px] space-y-4 mr-12">
+              <div class="w-20 mx-auto">
+                <img src="images/icon-4.png" alt="">
+              </div>
+              <h3 class="text-xl font-extrabold leading-relaxed tracking-wide">Research Planning and Brainstorming</h3>
+              <p>More than just translating the brief as it is, we’re open to preliminary discussion & exchange thoughts to get better context as a foundation to start & an essence to aim</p>
+            </div>
+            <div class="w-[320px] space-y-4">
+              <div class="w-20 mx-auto">
+                <img src="images/icon-3.png" alt="">
+              </div>
+              <h3 class="text-xl font-extrabold leading-relaxed tracking-wide">Research Fieldwork</h3>
+              <p>The heart of qualitative approach, addressing great questions, listens to all responses… carefully, critically, & intelligently. Not interrogative Q&A but reciprocal conversation between two parties who trust each other</p>
+            </div>
+            <div class="w-[320px] space-y-4 mr-12 mt-12">
+              <div class="w-20 mx-auto">
+                <img src="images/icon-2.png" alt="">
+              </div>
+              <h3 class="text-xl font-extrabold leading-relaxed tracking-wide">Research Analysis</h3>
+              <p>Look behind the direct responses, not all might be revealing the truth; the essence is to understand what matters, the contextual, & what they imply to your business</p>
+            </div>
+            <div class="w-[320px] space-y-4 mt-12">
+              <div class="w-20 mx-auto">
+                <img src="images/icon-1.png" alt="">
+              </div>
+              <h3 class="text-xl font-extrabold leading-relaxed tracking-wide">Research Report</h3>
+              <p>The simpler, the easier to digest, the better. We avoid fancy wordings & jargons. We believe that what’s most important is set the contextual understanding & answer the ‘so what’ way forward </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Choose us Section -->
+      <section class="py-10">
+        <div>
+          <h2 class="text-3xl font-extrabold leading-relaxed tracking-wide pb-3 text-center">Why Choose us</h2>
+          <div class="flex justify-center">
+            <ul class="w-[500px] space-y-6 md:mt-24">
+              <li class="flex items-start space-x-3">
+                <img class="w-8" src="images/checklist.png" alt="">
+                <p>We are 100% local Indonesian firm and small on purpose, as a way to stay agile & careful </p>
+              </li>
+              <li class="flex items-start space-x-3">
+                <img class="w-8" src="images/checklist.png" alt="">
+                <p>We are flexible, not fixated to certain way of doing, passionate to create more personalized approach to our clients & partners</p>
+              </li>
+              <li class="flex items-start space-x-3">
+                <img class="w-8" src="images/checklist.png" alt="">
+                <p>We partner closely with our third parties –not just having them as suppliers -- to ensure our set standard quality</p>
+              </li>
+              <li class="flex items-start space-x-3">
+                <img class="w-8" src="images/checklist.png" alt="">
+                <p>We treat all clients & partners as close friends we really care deeply, with reliable can do attitude and valuable advise throughout the process</p>
+              </li>
+            </ul> 
+            <div class="w-[400px]">
+              <img src="images/why-choose-us.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Articles Section -->
+      <section class="py-10">
+        <div>
+          <h2 class="text-center text-3xl font-extrabold mb-12">Articles</h2> 
+          <div class="flex justify-center items-center md:space-x-6">
+            <div class="w-72 rounded-2xl">
+              <div>
+                <img src="images/article-thumbnail-1.png" class="rounded-md" alt="Dashboard admin"> 
+              </div>
+              <h4 class="mt-4 font-semibold tracking-wide pb-1">Marketing Statistics</h4>
+              <p class="text-xs pb-3">4 September 2021</p>
+              <p>Learn How To Boost Your Revenue With Avada Business Coach Lorem ipsum dolor sit amet, consectetur adipiscing ...</p>
+            </div> 
+            <div class="w-72">
+              <div>
+                <img src="images/article-thumbnail-2.png" class="rounded-md" alt="Bussines man on phone"> 
+              </div>
+              <h4 class="mt-4 font-semibold tracking-wide pb-1">Planning for Growth</h4>
+              <p class="text-xs pb-3">17 September 2021</p>
+              <p>Learn How To Boost Your Revenue With Avada Business Coach Lorem ipsum dolor sit amet, consectetur adipiscing ...</p>
+            </div> 
+            <div class="w-72">
+              <div>
+                <img src="images/article-thumbnail-3.png" class="rounded-md" alt="Bussines plan on paper"> 
+              </div>
+              <h4 class="mt-4 font-semibold tracking-wide pb-1">Bussines Strategy</h4>
+              <p class="text-xs pb-3">22 September 2021</p>
+              <p>Learn How To Boost Your Revenue With Avada Business Coach Lorem ipsum dolor sit amet, consectetur adipiscing ...</p>
+            </div> 
+          </div>
+        </div> 
+      </section>
+
+
+
+      <!-- Reviews Section -->
+      <section class="py-10">
+        <div class="flex justify-center items-center">
+          <div class="w-[380px]">
+            <img src="images/eleanor-pena.png" alt="Eleanor Pena">
+          </div> 
+          <div class="w-[500px] pl-8">
+            <p class="text-2xl"><span class="text-5xl inline-block">“</span>IC Qual led us to insight that informed a huge strategy for our organization. its nice to collaborate with a firm thats as commited as our own internal team<span class="text-5xl inline-block">”</span></p>
+            <h6 class="text-xl font-bold mt-8">Eleanor Pena</h6>
+            <p class="text-sm">Marketing Research</p>
+          </div>
+        </div> 
+      </section>
+
+
+
+      <!-- Footer Section -->
+      <footer class="py-10 px-20 mt-6">
+         <div class="flex md:justify-between items-start">
+          <div>
+            <img src="images/logo.png" class="w-28 mb-3" alt="Logo">
+            <p>Office Address :<br>
+              Regus World, Room 2911<br>
+              PT. Widya Visi Nurkani<br>
+              Ciputra World <br>
+              DBS Bank Tower 48th floor<br>
+              Jl. Prof. Dr. Satria Kav. 1-5, Cibiru<br>
+              Jakarta 23442 - Indonesia</p>
+          </div>
+          <div>
+            <h6 class="text-xl font-bold mb-3">Contact us</h6>
+            <p>Phone: (+62)858-8092-0022<br>
+              Email: mira@icual.com</p>
+          </div>
+          <div>
+            <h6 class="text-xl font-bold mb-3">Social Media</h6>
+            <div class="flex space-x-4">
+              <img src="images/social-instagram.svg" alt="">
+              <img src="images/social-twitter.svg" alt="">
+              <img src="images/social-facebook.svg" alt="">
+            </div>
+          </div>
+         </div> 
+      </footer>
+    </div>
   </body>
 </html>
