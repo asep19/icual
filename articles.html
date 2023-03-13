@@ -5,8 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/main.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
   </head>
-  <body>
+  <body x-data="{ openMenu: false }" :class="openMenu ? 'overflow-hidden' : 'overflow-visible'">
+    <style>
+       [x-cloak] {
+         display: none !important;
+       }
+    </style>
+    <div class="container mx-auto px-5 pt-5">
+      <!-- Navigation -->
+      <header class="flex justify-between items-center"> 
+        <div class="w-[103px] h-[34px] md:w-[135px] md:h-[43px]">
+          <a href="index.html">
+            <img src="images/logo.png" alt="logo">
+          </a>
+        </div>
+        <button class="inline-block md:hidden" @click="openMenu = !openMenu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+          </svg>
+        </button>
+       <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="text-light-crimson font-semibold">Home</a></li>
+          <li><a href="about.html" class="hover:text-light-crimson">About</a></li>
+          <li><a href="services.html" class="hover:text-light-crimson">Services</a></li>
+          <li><a href="teams.html" class="hover:text-light-crimson">Teams</a></li>
+          <li><a href="articles.html" class="hover:text-light-crimson">Articles</a></li>
+          <li><a href="contactus.html" class="hover:text-light-crimson">Contact</a></li>
+        </ul>     
+       </nav> 
+      </header>
+    </div>
+
+
+      <!-- Mobile Menu -->
+      <nav id="mobile-navigation" class="fixed top-0 right-0 bottom-0 left-0 backdrop-blur-sm z-10" :class="openMenu ? 'visible' : 'invisible'" x-cloak>
+
+        <ul class="absolute top-0 right-0 bottom-0 w-10/12 py-4 bg-white drop-shadow-2xl z-10 transition-all">
+
+          <li class="border-b border-inherit">
+            <a href="index.html" class="block p-4" aria-current="true">Home</a>
+          </li>
+          <li class="border-b border-inherit">
+            <a href="about.html" class="block p-4">About</a>
+          </li>
+          <li class="border-b border-inherit">
+            <a href="services.html" class="block p-4">Services</a>
+          </li>
+          <li class="border-b border-inherit">
+            <a href="teams.html" class="block p-4">Teams</a>
+          </li>
+          <li class="border-b border-inherit">
+            <a href="articles.html" class="block p-4">Articles</a>
+          </li>
+          <li class="border-b border-inherit">
+            <a href="contactus.html" class="block p-4">Contact</a>
+          </li>
+
+        </ul>
+
+        <!-- Close Button -->
+        <button class="absolute top-0 right-0 bottom-0 left-0" @click="openMenu = !openMenu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute top-2 left-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+      </nav>
+
+
 
     <div class="container mx-auto px-4">
       <!-- Intro Section -->
